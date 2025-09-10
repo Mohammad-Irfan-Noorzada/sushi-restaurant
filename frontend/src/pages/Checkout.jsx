@@ -16,7 +16,7 @@ function Checkout({ setCartItems }) {
   const cartItems = location.state?.cartItems || [];
   const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
-  const BACKEND_URI="http://localhost:5000";
+  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
 
   const navigate = useNavigate();
 

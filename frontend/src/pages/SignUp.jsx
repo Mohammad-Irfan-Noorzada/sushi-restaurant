@@ -14,7 +14,7 @@ function SignUp() {
   
   const [loading, setLoading] = useState(false);
 
-  const BACKEND_URI="http://localhost:5000";
+  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmedPassword, setShowConfirmedPassword] = useState(false);

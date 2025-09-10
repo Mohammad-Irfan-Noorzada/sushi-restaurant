@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Cart({ cartItems, setCartItems, isCartOpen, setIsCartOpen, increase, decrease }) {
 
-  const BACKEND_URI="http://localhost:5000";
+  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
 
   const totalItems = cartItems.length;
   const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);

@@ -79,7 +79,12 @@ function Header({ scrolled, cartItems, isCartOpen, setIsCartOpen }) {
               </nav>
             </div>
 
-            <div className="flex items-center justify-center gap-4 lg:gap-6">
+            <div className={`flex items-center justify-center gap-4 lg:gap-6
+                ${isAuthenticated && user 
+                  ? ""
+                  : "mr-10 md:mr-0"
+                }
+              `}>
               <div className="relative">
                 <FaShoppingCart 
                   onClick={() => setIsCartOpen(true)}

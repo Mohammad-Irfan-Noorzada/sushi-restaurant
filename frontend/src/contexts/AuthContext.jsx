@@ -8,7 +8,7 @@ export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(!!token); // True while verifying token
 
-  const BACKEND_URI = "http://localhost:5000";
+  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
 
   // On mount, if token exists try to verify and load user
   useEffect(() => {

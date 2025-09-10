@@ -10,7 +10,7 @@ function ResetPassword() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const BACKEND_URI="http://localhost:5000";
+  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
 
   const handleResetPassword = async (e) => {
     e.preventDefault();

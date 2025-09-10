@@ -13,7 +13,7 @@ function Reservation() {
 
   const navigate = useNavigate();
 
-  const BACKEND_URI="http://localhost:5000";
+  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
   
   const onSubmit = async(data) => {
     setLoading(true);

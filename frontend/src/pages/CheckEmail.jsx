@@ -8,7 +8,7 @@ function CheckEmail() {
   const [resent, setResent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const BACKEND_URI = "http://localhost:5000";
+  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
 
   const email = localStorage.getItem("verifyEmail");
 

@@ -10,7 +10,7 @@ function MyOrder() {
   const [loading, setLoading] = useState(false);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
 
-  const BACKEND_URI = "http://localhost:5000";
+  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
 
   useEffect(() => {
     setLoading(true);

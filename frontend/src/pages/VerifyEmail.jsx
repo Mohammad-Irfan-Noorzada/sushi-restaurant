@@ -8,7 +8,7 @@ function VerifyEmail() {
   const { token } = useParams();
   const [ message, setMessage ] = useState("Verifying...");
 
-  const BACKEND_URI = "http://localhost:5000";
+  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
 
   useEffect(() => {
     const verify = async () => {

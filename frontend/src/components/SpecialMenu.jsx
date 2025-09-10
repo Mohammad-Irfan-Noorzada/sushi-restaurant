@@ -2,9 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
-function SpecialMenu({ cartItems, increase, decrease}) {
+function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
   const [sushis, setSushis] = useState([])
-  const BACKEND_URI="http://localhost:5000";
+  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [visibleCount, setVisibleCount] = useState(6);
