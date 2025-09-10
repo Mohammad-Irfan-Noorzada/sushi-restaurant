@@ -1,0 +1,71 @@
+import React, {createContext, useEffect, useState, useContext} from "react";
+import axios from "axios";
+
+const AuthContext = createContext();
+
+export const AuthProvider = ({children}) => {
+  const [token, setToken] = useState(() => localStorage.getItem("token") || sessionStorage.getItem("token"));
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(!!token); // True while verifying token
+
+  const BACKEND_URI = "http://localhost:5000";
+
+  // On mount, if token exists try to verify and load user
+  useEffect(() => {
+    const init = async () => {
+      if (!token) {
+        setLoading(false);
+        return;
+      }
+      try {
+        // Try to get user info using token
+        const res = await axios.get(`${BACKEND_URI}/api/auth/user`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          },
+        });
+        setUser(res.data.user || res.data);
+      } catch(error) {
+        console.warn("Token invalid or auth/user failed", error?.response?.status);
+        localStorage.removeItem("token");
+        setToken(null);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    init();
+  }, [token]);
+
+  // Call this after login
+  const login = (newToken, userData = null, rememberMe = false) => {
+    const storage = rememberMe ? localStorage : sessionStorage;
+    storage.setItem("token", newToken);
+    setToken(newToken);
+    if (userData) setUser(userData);
+  };
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    setToken(null);
+    setUser(null);
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{
+        token,
+        user,
+        loading,
+        isAuthenticated: !!token && !!user,
+        login,
+        logout,
+        setUser, // Optional: to update profile
+      }}
+    >
+      {children}    
+    </AuthContext.Provider>
+  )
+}
+
+export const useAuth = () => useContext(AuthContext);

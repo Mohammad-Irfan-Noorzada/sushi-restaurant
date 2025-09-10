@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover-link {
+    @apply relative after:absolute after:left-1/2 after:-bottom-1 after:w-0 after:h-[0.175rem] after:bg-goldYellow after:transition-all
+    after:duration-300 hover:after:left-0 hover:after:w-full
+}
+
+.input {
+    @apply py-2 lg:py-2.5 px-2 md:px-4 rounded-md text-lightGray text-sm sm:text-base border-[0.125rem] border-lightGray
+   focus:outline-none focus:border-goldYellow focus:text-goldYellow w-full bg-deepGray
+}
+
+.error {
+    @apply text-xs sm:text-sm font-medium text-red pl-2 pt-1
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    background-color: #1E1E1E;
+    color: white;
+    max-width: 100rem;
+    margin-inline: auto;
+}
+
+.my-toast {
+  min-height: 2.5rem;     
+  font-size: 0.9rem;      
+  width: 13rem;
+  margin-block: 0.4rem;
+}
+
+.my-toast-body {
+  font-weight: 500;
+}
