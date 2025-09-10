@@ -12,13 +12,11 @@ function Reservation() {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
   
   const onSubmit = async(data) => {
     setLoading(true);
     try {
-      const res = await axios.post(`${BACKEND_URI}/api/reservation`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/reservation`, {
         ...data, // we used spread operator, instead of fullname: data.fullname...
         comments: data.comments || "",
         newsletter: !!data.newsletter,

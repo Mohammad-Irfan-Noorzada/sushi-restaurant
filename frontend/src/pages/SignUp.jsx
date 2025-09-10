@@ -14,8 +14,6 @@ function SignUp() {
   
   const [loading, setLoading] = useState(false);
 
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
-
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmedPassword, setShowConfirmedPassword] = useState(false);
 
@@ -39,7 +37,7 @@ function SignUp() {
       }
 
       // Send data to backend
-      const response = await axios.post(`${BACKEND_URI}/api/auth/signup`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, {
         ...data,
         captcha: captchaValue,
       });

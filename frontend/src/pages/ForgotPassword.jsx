@@ -10,13 +10,11 @@ function ForgotPassword() {
   const {register, handleSubmit, formState: {errors} } = useForm();
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
 
   const onSubmit = async (data) => {
     try {
       setLoading(true);
-      const res = await axios.post(`${BACKEND_URI}/api/auth/forgotpassword`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/forgotpassword`, {
         ...data 
       }
     );

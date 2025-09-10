@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
 function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
-  const [sushis, setSushis] = useState([])
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
+  const [sushis, setSushis] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [visibleCount, setVisibleCount] = useState(6);
@@ -14,7 +13,7 @@ function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
     setLoading(true);
     setError(null);
 
-    fetch(`${BACKEND_URI}/api/sushi`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/sushi`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch sushis!");
         return res.json();
@@ -66,7 +65,7 @@ function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
               {!loading && !error && sushis.slice(0, visibleCount).map(sushi => (
                 <div className="max-w-[28.125rem] lg:max-w-96 bg-deepGray" key={sushi._id}>
                   <div className="relative">
-                    <img src={`${BACKEND_URI}${sushi.img}`} alt={sushi.title} className="h-52 xl:h-72 w-full object-cover bg-deepGray" width={375} height={290} />
+                    <img src={`${import.meta.env.VITE_API_URL}${sushi.img}`} alt={sushi.title} className="h-52 xl:h-72 w-full object-cover bg-deepGray" width={375} height={290} />
                     {cartItems.find(i => i._id === sushi._id)?.qty > 0 ? (
                       <div className="absolute bottom-4 right-4 flex items-center gap-3 bg-softBeigeYellow p-1.5 rounded-full">
                         <img 
@@ -105,7 +104,7 @@ function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
 
                     <div className="flex justify-between items-center">
                       <span className="font-bold font-cinzel text-xl md:text-base lg:text-xl text-softBeigeYellow">{`$${sushi.price} USD`}</span>
-                      <img src={`${BACKEND_URI}${sushi.icon}`} alt="stars" className="w-24 lg:w-28" />
+                      <img src={`${import.meta.env.VITE_API_URL}${sushi.icon}`} alt="stars" className="w-24 lg:w-28" />
                     </div>
                   </div>
                 </div>

@@ -8,8 +8,6 @@ export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(!!token); // True while verifying token
 
-  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
-
   // On mount, if token exists try to verify and load user
   useEffect(() => {
     const init = async () => {
@@ -19,7 +17,7 @@ export const AuthProvider = ({children}) => {
       }
       try {
         // Try to get user info using token
-        const res = await axios.get(`${BACKEND_URI}/api/auth/user`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/user`, {
           headers: {
             Authorization: `Bearer ${token}`
           },

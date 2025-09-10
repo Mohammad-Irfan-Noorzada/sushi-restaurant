@@ -10,13 +10,11 @@ function ResetPassword() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
-
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post(`${BACKEND_URI}/api/auth/resetpassword/${token}`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/resetpassword/${token}`, {
         password,
       });
       toast.success(res.data.message); // Password reset successfully!

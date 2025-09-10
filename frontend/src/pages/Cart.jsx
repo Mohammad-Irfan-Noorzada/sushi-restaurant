@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 function Cart({ cartItems, setCartItems, isCartOpen, setIsCartOpen, increase, decrease }) {
 
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
-
   const totalItems = cartItems.length;
   const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
@@ -54,7 +52,7 @@ function Cart({ cartItems, setCartItems, isCartOpen, setIsCartOpen, increase, de
                       <div className="flex justify-between items-center" key={item._id}>
                         <div className="flex items-center gap-4">
                           <div className="">
-                            <img src={`${BACKEND_URI}${item.img}`} alt={item.title} className="w-20 h-20 md:w-24 md:h-24 object-cover" />
+                            <img src={`${import.meta.env.VITE_API_URL}${item.img}`} alt={item.title} className="w-20 h-20 md:w-24 md:h-24 object-cover" />
                           </div>
                           <div className="space-y-3">
                             <div className="">

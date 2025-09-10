@@ -16,8 +16,6 @@ function Checkout({ setCartItems }) {
   const cartItems = location.state?.cartItems || [];
   const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
-
   const navigate = useNavigate();
 
   const handleCountryChange = (e) => {
@@ -28,7 +26,7 @@ function Checkout({ setCartItems }) {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      const res = await axios.post(`${BACKEND_URI}/api/orders`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/orders`, {
         ...data,
         items: cartItems.map(item => ({
           productId: item._id,
@@ -258,7 +256,7 @@ function Checkout({ setCartItems }) {
                       <div className="flex justify-between items-center" key={item._id}>
                         <div className="flex items-center gap-4">
                           <div className="relative">
-                            <img src={`${BACKEND_URI}${item.img}`} alt={item.title} className="w-20 h-20 md:w-24 md:h-24 object-cover" />
+                            <img src={`${import.meta.env.VITE_API_URL}${item.img}`} alt={item.title} className="w-20 h-20 md:w-24 md:h-24 object-cover" />
                             <div className="absolute -top-2 -right-3 bg-goldYellow rounded-full font-cinzel font-extrabold text-darkCharcoal text-xs px-2 pt-1.5 pb-1">{item.qty}</div>
                           </div>
                           <div className="">

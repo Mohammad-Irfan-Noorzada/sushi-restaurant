@@ -8,12 +8,10 @@ function VerifyEmail() {
   const { token } = useParams();
   const [ message, setMessage ] = useState("Verifying...");
 
-  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
-
   useEffect(() => {
     const verify = async () => {
       try {
-        const res = await fetch(`${BACKEND_URI}/api/auth/verify/${token}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/verify/${token}`);
         const data = await res.json();
 
         if(data.success) {

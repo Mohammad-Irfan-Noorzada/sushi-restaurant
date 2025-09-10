@@ -8,8 +8,6 @@ function CheckEmail() {
   const [resent, setResent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
-
   const email = localStorage.getItem("verifyEmail");
 
   const handleResend = async () => {
@@ -21,7 +19,7 @@ function CheckEmail() {
         return;
       };
 
-      const response = await axios.post(`${BACKEND_URI}/api/auth/resend-verification`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/resend-verification`, {
         email,
       });
       toast.success(response.data.message);

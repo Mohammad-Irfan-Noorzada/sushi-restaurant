@@ -10,13 +10,11 @@ function MyBooking() {
   const [loading, setLoading] = useState(false);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
 
-  const BACKEND_URI = "https://sushi-restaurant-m6oe.onrender.com";
-
   useEffect(() => {
     setLoading(true);
     const fetchReservations = async () => {
       try {
-        const res = await axios.get(`${BACKEND_URI}/api/reservation`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/reservation`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -35,7 +33,7 @@ function MyBooking() {
 
   const cancleReservation = async (reservationId) => {
     try {
-      const res = await axios.patch(`${BACKEND_URI}/api/reservation/${reservationId}/cancel`, {},
+      const res = await axios.patch(`${import.meta.env.VITE_API_URL}/api/reservation/${reservationId}/cancel`, {},
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

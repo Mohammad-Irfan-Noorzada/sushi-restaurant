@@ -20,8 +20,6 @@ function LogIn() {
 
   const { login } = useAuth();
 
-  const BACKEND_URI="https://sushi-restaurant-m6oe.onrender.com";
-
   const handleCaptchaChange = (value) => {
     setCaptchaValue(value);
   };
@@ -36,7 +34,7 @@ function LogIn() {
         return;
       }
 
-      const res = await axios.post(`${BACKEND_URI}/api/auth/login`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         ...data,
         rememberMe: !!data.rememberMe,
         captcha: captchaValue,
