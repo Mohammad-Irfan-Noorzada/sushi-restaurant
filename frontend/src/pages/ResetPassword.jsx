@@ -31,7 +31,7 @@ function ResetPassword() {
       <section className="flex justify-center items-center min-h-screen py-10 px-4 md:px-10">
         <div className="max-w-6xl mx-auto">
 
-          <div className="">
+          <div className="bg-deepGray shadow-2xl rounded-sm shadow-black px-4 py-6 lg:px-10 lg:py-8">
             <div className="space-y-10 lg:space-y-16">
 
               <h2 className="text-lightGray font-medium text-2xl lg:text-3xl xl:text-[2.5rem] text-left">
