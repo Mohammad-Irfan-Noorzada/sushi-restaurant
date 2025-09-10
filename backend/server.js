@@ -13,7 +13,7 @@ const app = express();
 
 // Middlewares
 const corsOptions = {
-  origin: "*",
+  origin: "https://sushi-restaurant-hylm.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
