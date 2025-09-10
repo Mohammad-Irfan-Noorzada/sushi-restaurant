@@ -25,7 +25,7 @@ exports.signup = async (req, res) => {
       },
     });
 
-    const verifcationLink = `http://localhost:5173/verify/${verificationToken}`;
+    const verifcationLink = `${process.env.FRONTEND_URL}/verify/${verificationToken}`;
 
     await transporter.sendMail({
       from: `"Sushi Restaurant 🍣" <${process.env.EMAIL_USER}>`,

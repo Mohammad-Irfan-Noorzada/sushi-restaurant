@@ -72,7 +72,7 @@ router.post("/signup", authLimiter, async (req, res) => {
       userId: newUser._id,
     });
 
-    const verificationLink = `http://localhost:5173/verify/${verificationToken}`;
+    const verificationLink = `${process.env.FRONTEND_URL}/verify/${verificationToken}`;
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -203,7 +203,7 @@ router.post("/forgotpassword", authLimiter, async (req, res) => {
     await user.save();
 
     // Create reset link
-    const resetLink = `http://localhost:5173/resetpassword/${resetToken}`;
+    const resetLink = `${process.env.FRONTEND_URL}/resetpassword/${resetToken}`;
 
     // Send email
     const transporter = nodemailer.createTransport({
@@ -319,7 +319,7 @@ router.post("/resend-verification", authLimiter, async (req, res) => {
 
     logAction(user._id, "verify email - resent", { email: user.email });
 
-    const verificationLink = `http://localhost:5173/verify/${verificationToken}`;
+    const verificationLink = `${process.env.FRONTEND_URL}/verify/${verificationToken}`;
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
