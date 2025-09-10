@@ -15,7 +15,7 @@ function ResetPassword() {
     try {
       setLoading(true);
       const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/resetpassword/${token}`, {
-        password,
+        password: password.trim(),
       });
       toast.success(res.data.message); // Password reset successfully!
       navigate("/login");
