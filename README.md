@@ -22,7 +22,7 @@ Includes features like user authentication, reservation system, cart and orderin
 - Cart system with quantity management  
 - Reservation & booking system  
 - Email verification & password reset flows  
-- Google reCAPTCHA v2 for security  
+- Google reCAPTCHA v2 for more security  
 - Toast notifications using **React Toastify**
 
 ### Backend
