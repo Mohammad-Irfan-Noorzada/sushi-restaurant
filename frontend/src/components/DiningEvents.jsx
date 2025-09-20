@@ -6,7 +6,7 @@ const diningEvents = [
     price: '$500',
     title: 'Fine Dining',
     text: 'Bottle of Champagne Fine Sushi Tower For 2+ Dessert',
-    image: 'images/fine-dining.png'
+    image: 'images/fine-dining.webp'
   },
 
   {
@@ -14,7 +14,7 @@ const diningEvents = [
     price: '$1000',
     title: 'Gold Dining',
     text: 'Bottle of Champagne Secret Menu Sushi For 2+ Dessert',
-    image: 'images/gold-dining.png'
+    image: 'images/gold-dining.webp'
   },
 
   {
@@ -22,7 +22,7 @@ const diningEvents = [
     price: '$1500',
     title: 'Royality Dining',
     text: 'Bottle of Luxury Champagne Special Menu Sushi For 2+ Royal Dessert',
-    image: 'images/royality-dining.png'
+    image: 'images/royality-dining.webp'
   },
 ]
 

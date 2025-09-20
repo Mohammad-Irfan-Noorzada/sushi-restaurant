@@ -68,7 +68,7 @@ function Cart({ cartItems, setCartItems, isCartOpen, setIsCartOpen, increase, de
 
                             <div className="flex items-center justify-around bg-softBeigeYellow px-1 py-0.5 rounded-full w-20">
                               <img 
-                                src="images/minus-icon.png" 
+                                src="images/minus-icon.webp" 
                                 alt="minus" 
                                 className="w-3 brightness-0 cursor-pointer"
                                 onClick={() => decrease(item._id)} />
@@ -76,7 +76,7 @@ function Cart({ cartItems, setCartItems, isCartOpen, setIsCartOpen, increase, de
                               <span className="text-darkCharcoal font-bold font-cinzel text-sm">{cartItems.find(i => i._id === item._id)?.qty}</span>
 
                               <img 
-                                src="images/plus-icon.png" 
+                                src="images/plus-icon.webp" 
                                 alt="plus" 
                                 className="w-3 brightness-0 cursor-pointer" 
                                 onClick={() => increase(item)}

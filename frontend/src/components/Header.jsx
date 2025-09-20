@@ -45,7 +45,7 @@ function Header({ scrolled, cartItems, isCartOpen, setIsCartOpen }) {
 
           <div className="flex md:items-center justify-between">
             <div className="">
-              <img src="images/logo.svg" alt="logo" className="w-14 h-14 lg:w-16 lg:h-16" />
+              <img src="images/logo.webp" alt="logo" className="w-14 h-14 lg:w-16 lg:h-16" />
             </div>
 
             <div className="z-50">

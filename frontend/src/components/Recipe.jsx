@@ -3,7 +3,7 @@ import React from "react";
 const recipes = [
   {
     id: '1',
-    img: 'images/dragon-sushi.png',
+    img: 'images/dragon-sushi.webp',
     title: 'Dragon Sushi',
     text: 'Ingredients: Fresh eel, avocado, cucumber, and sushi rice wrapped in nori, topped with sweet eel sauce.',
     price: '$50',
@@ -11,7 +11,7 @@ const recipes = [
 
   {
     id: '2',
-    img: 'images/creamy-sushi.png',
+    img: 'images/creamy-sushi.webp',
     title: 'Creamy Sushi',
     text: 'Ingredients: Sushi rice, crab sticks, avocado, and cucumber mixed with creamy mayo sauce.',
     price: '$65',
@@ -19,7 +19,7 @@ const recipes = [
 
   {
     id: '3',
-    img: 'images/roll-salmon-sushi.png',
+    img: 'images/roll-salmon-sushi.webp',
     title: 'Roll Salmon Sushi',
     text: 'Ingredients: Sushi rice, fresh salmon, cucumber, avocado, and nori sheets rolled to perfection.',
     price: '$40',

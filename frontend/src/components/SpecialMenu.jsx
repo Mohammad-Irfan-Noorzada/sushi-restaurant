@@ -70,7 +70,7 @@ function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
                       <div className="absolute bottom-4 right-4 flex items-center gap-3 bg-softBeigeYellow p-1.5 rounded-full">
                         <img 
                           className="cursor-pointer bg-deepGray py-2.5 px-1.5 rounded-full w-7 hover:bg-darkCharcoal transition-colors duration-300" 
-                          src="images/minus-icon.png" alt="minus" 
+                          src="images/minus-icon.webp" alt="minus" 
                           onClick={() => decrease(sushi._id)} 
                         />
 
@@ -78,14 +78,14 @@ function SpecialMenu({ cartItems, setCartItems, increase, decrease}) {
 
                         <img 
                           className="cursor-pointer bg-deepGray p-1.5 rounded-full w-7 hover:bg-darkCharcoal transition-colors duration-300" 
-                          src="images/plus-icon.png" alt="add" 
+                          src="images/plus-icon.webp" alt="add" 
                           onClick={() => increase(sushi)}
                         />
                       </div>
                     ) : (
                       <img 
                         className="absolute bottom-[1.375rem] right-[1.375rem] cursor-pointer bg-deepGray p-1.5 rounded-full w-7 hover:bg-darkCharcoal transition-colors duration-300" 
-                        src="images/plus-icon.png" alt="add" 
+                        src="images/plus-icon.webp" alt="add" 
                         onClick={() => increase(sushi)}
                       />
                     )}

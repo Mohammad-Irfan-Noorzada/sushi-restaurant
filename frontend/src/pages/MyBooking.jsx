@@ -137,9 +137,9 @@ function MyBooking() {
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 lg:gap-10">
                       <div className="sm:max-w-80 md:max-w-96 space-y-6">
                         <div className="flex gap-4 md:gap-6 items-center">
-                          {reservation.table === "Fine | $500" ? <img src="images/fine-chair.png" alt="fine chair" className="w-24 md:w-28 lg:w-32" width={128} height={156} /> :
-                          reservation.table === "Gold | $1000" ? <img src="images/golden-chair.png" alt="golden chair" className="w-24 md:w-28 lg:w-32" width={128} height={156}  /> :
-                          reservation.table === "Royalty | $1500" ? <img src="images/luxury-chair.png" alt="luxury chair" className="w-24 md:w-28 lg:w-32" width={128} height={156}  /> : ""}
+                          {reservation.table === "Fine | $500" ? <img src="images/fine-chair.webp" alt="fine chair" className="w-24 md:w-28 lg:w-32" width={128} height={156} /> :
+                          reservation.table === "Gold | $1000" ? <img src="images/golden-chair.webp" alt="golden chair" className="w-24 md:w-28 lg:w-32" width={128} height={156}  /> :
+                          reservation.table === "Royalty | $1500" ? <img src="images/luxury-chair.webp" alt="luxury chair" className="w-24 md:w-28 lg:w-32" width={128} height={156}  /> : ""}
 
                           <div className="flex flex-col gap-1 text-xs sm:text-sm md:text-base">
                             <span className="">Reservation ID: #{reservation._id.slice(-6)}</span>

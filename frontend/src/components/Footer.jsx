@@ -14,11 +14,11 @@ function Footer() {
             
             <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-10">
               <div className="flex justify-center items-center gap-2">
-                <img src="images/map-pin-fill.svg" alt="map" className="w-6 h-6" />
+                <img src="images/map-pin-fill.webp" alt="map" className="w-6 h-6" />
                 <p className="text-lightGray text-sm lg:text-lg">1-2-3 Shibuya, Shibuya-ku, <br /> Tokyo, 150-0002, Japan</p>
               </div>
               <div className="flex justify-center items-center gap-2">
-                <img src="images/phone-fill.svg" alt="phone" className="w-6 h-6" />
+                <img src="images/phone-fill.webp" alt="phone" className="w-6 h-6" />
                 <p className="text-lightGray text-sm lg:text-lg">Call us: +81 3-1234-5678</p>
               </div>
             </div>
@@ -32,7 +32,7 @@ function Footer() {
               </div>
             </Link>
             <div className="flex flex-col justify-center items-center gap-6 pt-8 md:pt-16">
-              <img src="images/logo.svg" alt="logo" className="w-14 h-14 md:w-16 md:h-16" />
+              <img src="images/logo.webp" alt="logo" className="w-14 h-14 md:w-16 md:h-16" />
               <div className="font-cormorantSC font-semibold space-x-4">
                 <ul className="flex items-center gap-2 md:gap-4">
                   <li><a href="#" className="hover-link text-lightGray lg:text-lg xl:text-xl">Instagram</a></li>

@@ -138,7 +138,7 @@ function MyOrder() {
                       <div className="sm:max-w-80 md:max-w-96 space-y-6">
                         <div className="flex gap-4 md:gap-6 items-center">
                           <div className="">
-                            <img src="images/sushi-palate.png" alt="sushi palate" className="w-24 md:w-28 lg:w-32" width={128} height={156} />
+                            <img src="images/sushi-palate.webp" alt="sushi palate" className="w-24 md:w-28 lg:w-32" width={128} height={156} />
                           </div>
 
                           <div className="flex flex-col gap-1 text-xs sm:text-sm md:text-base">

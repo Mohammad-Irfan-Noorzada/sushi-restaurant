@@ -20,7 +20,7 @@ function OurStory() {
           </div>
 
           <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-10">
-            <img src="images/three-people-in-kitchen.png" alt="three-people-in-kitchen" className="w-full max-w-[31.25rem]" />
+            <img src="images/three-people-in-kitchen.webp" alt="three-people-in-kitchen" className="w-full max-w-[31.25rem]" />
 
             <div className="max-w-[31.25rem] lg:max-w-[25rem] xl:max-w-[31.25rem] space-y-6 lg:space-y-10 text-center lg:text-left">
               <p className="text-lightGray md:text-lg lg:text-xl">

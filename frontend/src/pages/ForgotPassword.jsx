@@ -94,7 +94,7 @@ useEffect(() => {
 
             <div className="">
               <img 
-                src="images/shrimp-sushi.jpg"
+                src="images/shrimp-sushi.webp"
                 alt="shrimp-sushi"
                 className="flex rounded-2xl w-[28.125rem] sm:w-[33.125rem] md:w-[34.375rem] h-52 lg:h-full lg:max-w-md xl:max-w-xl object-cover" 
               />

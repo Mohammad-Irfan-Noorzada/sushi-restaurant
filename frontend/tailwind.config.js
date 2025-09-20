@@ -14,8 +14,8 @@ export default {
         red: "#F27070",
       },
       backgroundImage: {
-        "hero-pattern": "url('/images/hero-bg.png')",
-        "footer-pattern": "url('/images/footer-bg.png')",
+        "hero-pattern": "url('/images/hero-bg.webp')",
+        "footer-pattern": "url('/images/footer-bg.webp')",
       },
       fontFamily: {
         cormorantSC: "Cormorant SC",
